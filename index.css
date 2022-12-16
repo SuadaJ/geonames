@@ -1,0 +1,25 @@
+/*Global Styles*/
+html {
+  background-color: purple;
+}
+body {
+  font-family: serif;
+  color: white;
+}
+.title {
+  text-align: center;
+}
+table, th, td {
+  border: 2px solid black/*#563C5C*/;
+  padding: 5px;
+  border-spacing: 5px;
+}
+.table {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#divvy {
+  border: 5px solid white;
+  padding: 10px;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Geonames Web Service</title>
+  </head>
+  <body>
+    <h1 class="title">Geonames API</h1>
+    <table id="table" class="table">
+      <!--Header Row-->
+      <tr>
+        <th>API Name</th>
+        <th>API Description</th>
+        <th></th>
+      </tr>
+      <!--First Row and API-->
+      <tr>
+        <td>1. Country Information</td>
+        <td>
+          Returns information on a requested country. Returns Capital, Population, Area in square km and Bounding Box of mainland (excluding offshore islands)<br>
+        <!--USER ENTERED VALUES-->
+          <label for="country">Please enter a country:</label><br>
+          <input type="text" id="country" name="country"><br>
+          <label for="lang">Please select a language:</label><br>
+          <input type="text" id="lang" name="lang">
+        </td>
+        <td><input id="countryInfoBtn" type="button" value="Submit"></td>
+      </tr>
+      <!--Second Row and API-->
+      <tr>
+        <td>2. Timezone</td>
+        <td>
+          Returns timezone for given latitude and longitude with gmt offset.<br>
+          <br>Enter values for the required parameters below.
+          <!--USER ENTERED VALUES-->
+           <label for="lat">Latitude:</label><br>
+           <input type="text" id="lat" name="lat"><br>
+
+           <label for="long">Longitude:</label><br>
+           <input type="text" id="long" name="long"><br>
+           <!--OPTIONAL EXTRA PARAMETERS-->
+           <!--<label for="radius">Radius:</label><br>
+           <input type="text" id="radius" name="radius" value=""><br>
+
+           <label for="timeZoneLang">Language (to receive the results in):</label><br>
+           <input type="text" id="timeZoneLang" name="timeZoneLang" value=""><br>
+
+           <label for="date">Date:</label><br>
+           <input type="text" id="date" name="date" value=""><br>-->
+        </td>
+        <td><input id="timezoneBtn" type="button" value="Submit"></td>
+      </tr>
+      <!--Third Row and API-->
+      <tr>
+        <td>3. Weather</td>
+        <td>
+          Returns a list of weather stations with the most recent weather observation for the given coordinates. (User should specify number of results wanted.)<br>
+          <br>Enter values for the required parameters below.<br>
+          <!--USER ENTERED VALUES-->
+           <label for="coords">Coordinates north:</label><br>
+           <input type="text" id="north" name="north"><br>
+
+           <label for="coords">South:</label><br>
+           <input type="text" id="south" name="south"><br>
+
+           <label for="coords">East:</label><br>
+           <input type="text" id="east" name="east"><br>
+
+           <label for="coords">West:</label><br>
+           <input type="text" id="west" name="west"><br>
+
+           <label for="rows">Rows (number of results returned, default = 2):</label><br>
+           <input type="text" id="maxRows" name="maxRows" value="2"><br>
+        </td>
+        <td><input id="weather" type="button" value="Submit"></td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div id="results">Results</div>
+          <!--display results of API calls-->
+        </td>
+      </tr>
+    </table>
+    <!--The jQuery library-->
+    <script type="application/javascript" src="jQueryLibrary.js"></script>
+    <!--Local JavaScript code using jQuery-->
+    <script type="application/javascript" src="index.js"></script>
+  </body>
+</html>
